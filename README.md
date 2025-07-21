@@ -1,2 +1,1 @@
-# hub-core
-Центральний хаб для всіх компонентів.
+npm install @google/genai
