@@ -26,6 +26,9 @@ jobs:
   env:
     MY_VARIABLE: ${{ secrets. GEMINI_API_KEY }}
   run: echo "Значення змінної: $MY_VARIABLE"
+  env:
+    MY_VARIABLE: ${{ secrets. GEMINI_API_KEY }}
+  run: echo "Значення змінної: $MY_VARIABLE"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
