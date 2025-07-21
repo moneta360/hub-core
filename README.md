@@ -1,1 +1,1 @@
-npm install @google/genai
+
