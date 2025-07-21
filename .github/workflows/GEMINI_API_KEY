@@ -1,4 +1,0 @@
-- name: Use my secret
-  env:
-    MY_VARIABLE: ${{ secrets. GEMINI_API_KEY }}
-  run: echo "Значення змінної: $MY_VARIABLE"
