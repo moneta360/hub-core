@@ -1,0 +1,13 @@
+name: Smile Workflow
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Клонувати репозиторій
+      uses: actions/checkout@v4
+
+    - name: Приклад кроку
+      run: echo "Привіт, світ! Цей workflow працює."
