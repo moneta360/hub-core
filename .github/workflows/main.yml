@@ -11,7 +11,7 @@ jobs:
 
     - name: Приклад кроку
       run: echo "Привіт, світ! Цей workflow працює."
-        - name: Використати секрет як змінну середовища
+    - name: Використати секрет як змінну середовища
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # Замініть GEMINI_API_KEY на ім'я вашого секрету
       run: |
