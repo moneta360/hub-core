@@ -1,8 +1,45 @@
 <!DOCTYPE html>
-<html>
-<head><title>Hub Core</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evo Playground</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#111111">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').then(() => {
+        console.log("✅ Service Worker registered");
+      });
+    }
+  </script>
+</head>
 <body>
-<h1>Hub Core</h1>
-<script src='script.js'></script>
+  <header>
+    <h1>🧬 Evo Playground</h1>
+  </header>
+
+  <section id="controls">
+    <label>Mutation % <input type="number" id="mutation" value="10" /></label>
+    <label>Agents <input type="number" id="agentCount" value="30" /></label>
+    <button onclick="startSim()">Start</button>
+    <button onclick="nextGen()">Next Gen</button>
+    <button onclick="reset()">Reset</button>
+  </section>
+
+  <section id="canvas-container">
+    <canvas id="evoCanvas" width="300" height="500"></canvas>
+  </section>
+
+  <section id="stats">
+    <p>Generation: <span id="genCount">1</span></p>
+    <p>Best Fitness: <span id="bestFit">0</span></p>
+  </section>
+
+  <script src="genome.js"></script>
+  <script src="canvas.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
